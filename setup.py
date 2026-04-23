@@ -14,6 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# modyfied by setaur
+
 from distutils.core import setup
 import gettext
 
@@ -81,6 +83,11 @@ keyboard and mouse and you use them in another application.  No longer do you ne
       'Operating System :: POSIX :: Linux',
       'Topic :: Education :: Computer Aided Instruction (CAI)',
   ],
+  install_requires=[
+    'python3-xlib>=0.15',
+    'PyGObject<=3.50',
+    'pycairo',
+  ]
 )
 
 if __name__ == '__main__':
