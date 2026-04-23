@@ -1,5 +1,9 @@
 Release Notes
 =============
+Apr 23, 2026 (forked by setaur)
+-------------------
+* Added dependencies in setup.py (by setaur)
+* Small README.rst modification (by setaur)
 
 Apr 04, 2022 v 1.20
 -------------------
