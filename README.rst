@@ -1,8 +1,51 @@
-Forked from the original https://github.com/scottkirkwood/key-mon
+
+**Forked** from https://github.com/scottkirkwood/key-mon (original author: 
+`scottkirkwood <https://github.com/scottkirkwood>`_ )
+
+=======
+Key-Mon
+=======
+Useful for screencasting or recording utility that displays your live keyboard and mouse activity (Xorg only, no Wayland)
+
+.. image:: ./docs/keymon.gif
+    :alt: Key-Mon capabilities
+
 Changes:
-* Added dependecies in setup.py
-* Slightly changed README.rst (this beginning, pip=>pipx, dependencies list)
-* Added the binary AppImage file, as well as the script make-appimage.sh that was used to create it 
+-------
+
+* Added dependencies in setup.py
+
+* Changed README.rst
+
+* Added the binary AppImage file, as well as the script make-appimage.sh that was used to create it
+
+Installation:
+-------------
+  On Ubuntu/Mint/Debian systems - install required packages:::
+
+    $ sudo apt-get update
+
+    $ sudo apt-get install -y python3-xlib python3-gi python3-gi-cairo gir1.2-gtk-3.0 cmake libcairo2-dev libgirepository1.0-dev
+
+::
+
+  $ git clone 'https://github.com/setaur/key-mon'
+
+  $ cd key-mon/
+
+  $ pipx install .
+
+Or download the Appimage file from the https://github.com/setaur/key-mon/releases and run it:::
+
+  $ wget https://github.com/setaur/key-mon/releases/download/v1.20-fork/Key-Mon-x86_64_v1.20.AppImage
+
+  $ chmod +x Key-Mon-x86_64_v1.20.AppImage
+
+  $ ./Key-Mon-x86_64_v1.20.AppImage
+
+----
+
+original README below:
 
 =======
 Key-mon
@@ -34,16 +77,16 @@ Latest downloads can be found at:
 Installation
 ------------
 
-To install using ``pipx``,::
+To install using ``pip``,::
 
-  $ pipx install key-mon
+  $ pip install key-mon
 
 .. note::
 
     The latest release on PyPI is quite old (from 2013); consider installing
     `using the latest git commit <https://pip.pypa.io/en/latest/reference/pip_install/#git>`_::
 
-        $ pipx install git+https://github.com/scottkirkwood/key-mon
+        $ pip install git+https://github.com/scottkirkwood/key-mon
 
 To install using ``easy_install``::
 
@@ -61,11 +104,6 @@ This program requires other libraries which you may or may not have installed.
                    (https://pygobject.readthedocs.io/en/latest/)
 * gir1.2-gtk-3.0 - GIR bindings for the GTK3 widget set
                    (https://pygobject.readthedocs.io/en/latest/)
-* python3-gi-cairo - Python 3 Cairo bindings for GObject
-* cmake
-* python3-gi-cairo
-* libcairo2-dev - Development files for the Cairo 2D graphics library
-* libgirepository1.0-dev or libgirepository-2.0-dev
 		   
 License
 -------
